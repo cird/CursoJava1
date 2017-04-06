@@ -11,3 +11,20 @@ Image from http://docs.oracle.com
 
 
 Un **espacio de nombres** es un contexto donde los nombres de referencia son únicos, como por ejemplo dentro de una carpeta no puede haber archivos con el mismo nombre, en cambio sí puede haberlos en carpetas diferentes, en Java el espacio de nombres se llama **package** y permite organizar las Clases y las Interfaces.
+
+# Funciones, Operadores
+
+# Expresiones, Sentencias y Bloques
+Las expresiones conforman las partes de las sentencias de los programas, todas las combinaciones que invocan funciones, métodos, asignan valores, aplican operadores, son expresiones. Las sentencias son las unidades del programa, en Java terminan cada una en punto y coma ";" y están compuesta de una o más expresiones. 
+
+Las sentencias pueden agruparse en bloques que definen además un alcance para las variables. 
+
+# Tipos de datos Primitivos:
+
+int, long, float, boolean, char. 
+
+# Tipo String
+
+
+
+
