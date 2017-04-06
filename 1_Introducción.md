@@ -16,7 +16,7 @@ El **estado** se almacena en **campos**(fields), estos son datos propios de la c
 El **comportamiento** se define mediante **funciones** propias de la clase llamadas **métodos**
 
  
-El **encapsulamiento** evita el acceso indebido. El volumen interno (privado)  y la superficie visible (público) , junto a otros modificadores, permiten regular la exposición de componentes internos. Ejemplo
+El **encapsulamiento** evita accesos indebidos. El volumen interno (privado)  y la superficie visible (público) , junto a otros modificadores, permiten regular la exposición de componentes internos. Ejemplo
 
 ```Java
 class Cohete{
