@@ -15,7 +15,7 @@ Un **espacio de nombres** es un contexto donde los nombres de referencia son ún
 # Funciones, Operadores
 
 # Expresiones, Sentencias y Bloques
-Las expresiones conforman las partes de las sentencias de los programas, todas las combinaciones que invocan funciones, métodos, asignan valores, aplican operadores, son expresiones. Las sentencias son las unidades del programa, en Java terminan cada una en punto y coma ";" y están compuesta de una o más expresiones. 
+Las expresiones conforman las partes de las sentencias de los programas, son combinaciones de valores, asignaciones, invocación de funciones, métodos, operadores, etc.. Las sentencias son las unidades del programa, en Java terminan cada una en punto y coma ";" y están compuesta de una o más expresiones. 
 
 Las sentencias pueden agruparse en bloques que definen además un alcance para las variables. 
 
