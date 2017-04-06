@@ -9,7 +9,7 @@ Image from http://docs.oracle.com
 
 La estructura del objeto se define mediante la **clase** a la que pertenece.
 
-Los objetos tienen estado y comportamiento.
+Los objetos tienen *estado* y *comportamiento*.
 
 El **estado** se almacena en **campos**(fields), estos son datos propios de la clase que usa internamente y **propiedades** que pueden modificarse externamente.
 
