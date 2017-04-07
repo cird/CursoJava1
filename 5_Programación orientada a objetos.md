@@ -36,4 +36,12 @@ Los tipos de datos referencia son instancias de clases y no tipos primitivos, es
 
 Una interfaz permite definir qué métodos son necesarios pero sin especificar el contenido, por ejemplo si modelamos animales tendrán que implementarse diferentes formas del método caminar(), distintas para cada uno, pero todos tendrán ese método, en ese caso se podría definir una interfaz general con ese método, pero vacío, sin implementación, luego en la clase específica que define a cada animal se implementar la forma y manera particular según corresponda.
 
+Ejemplo real de jerarquía de interfaces
+
+![http://docs.oracle.com/javase/tutorial/figures/collections/colls-coreInterfaces.gif](http://docs.oracle.com/javase/tutorial/figures/collections/colls-coreInterfaces.gif)  
+Imagen de http://docs.oracle.com
+
+
+
+
 # Exceptions
