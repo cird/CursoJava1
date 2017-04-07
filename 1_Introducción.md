@@ -5,11 +5,26 @@
  
 Java es un lenguaje interpretado, esto quiere decir que se ejecuta a través de otro programa y no directamente en el sistema, en este caso ese otro programa es la máquina virtual java (JVM), esto permite correr el programa en diferentes arquitecturas, siempre que tengan instalada la máquina virtual correspondiente. ¿Por qué se llama máquina virtual y no intérprete? porque un programa en Java antes de ejecutarse requiere compilación, a diferencia de otros lenguajes interpretados la máquina virtual no interpreta el código Java sino que ejecuta el código compilado en bytecodes que son instrucciones de la JVM, intermediaria entre el código compilado Java y el sistema en cuestión.
 
-![http://docs.oracle.com/javase/tutorial/figures/getStarted/helloWorld.gif](http://docs.oracle.com/javase/tutorial/figures/getStarted/helloWorld.gif)
-Image from http://docs.oracle.com
+![http://docs.oracle.com/javase/tutorial/figures/getStarted/helloWorld.gif](http://docs.oracle.com/javase/tutorial/figures/getStarted/helloWorld.gif)  
+Imagen de http://docs.oracle.com
 
 
 # Funciones, Operadores
+
+```Java
+int suma( int a, int b){
+        int result;        
+        result = a+b;        
+        return resultado;
+}
+```
+O más sencilla 
+
+```Java
+int suma( int a, int b){        
+        return a+b;
+}
+```
 
 ```Java
 public class Test { 
@@ -24,7 +39,6 @@ Las expresiones son combinaciones de operadores, llamados a función, asignacion
 
 ```Java
 
-if(
 
 
 ```
