@@ -25,4 +25,4 @@ Formato de texto para el intercambio de datos basado en lenguaje Javascript.
 { "objeto" : {  "clave" : "valor",
                 "numeros" : [ 10, 20, 30, 40, 50] }
 }
-```Javascript
+```
