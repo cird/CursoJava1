@@ -1,7 +1,7 @@
 
-#Decisiones y Repeticiones
+# Decisiones y Repeticiones
 
-Herramientas del lenguaje para alterar el orden secuencial de ejecución y para hacer repeticiones, mejor dicho iteraciones, porque nadie se baña dos veces en el mismo río.
+Herramientas del lenguaje para alterar el orden secuencial de ejecución y para hacer repeticiones, mejor dicho iteraciones, porque nadie se baña dos veces en el mismo río. 
 
 
 ![https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/DiagramaFlujoLampara.svg/324px-DiagramaFlujoLampara.svg.png](https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/DiagramaFlujoLampara.svg/324px-DiagramaFlujoLampara.svg.png)
