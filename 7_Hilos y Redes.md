@@ -1,14 +1,28 @@
 ## Procesos y Treads
 
-Los programas pueden ejecutar varias tareas conjuntamente, mediante hilos y procesos, aún con sistemas que tienen un solo nucleo, dividiendo el tiempo de ejecución que le toca a acada una, más aún si el sistema posee varios procesadores o un procesador con muchos núcleos. 
+Los programas pueden ejecutar varias tareas conjuntamente, mediante hilos y procesos, si el sistema posee varios procesadores o varios núcleos, pero también con sistemas que tienen un solo nucleo, dividiendo el tiempo de ejecución que le toca a cada una.
 
-Un proceso tiene acceso sólo a su propio espacio de memoria y a recursos de ejecución privados, en teoría es un entorno cerrado. Normalmente los programas se ejecutan como un proceso, pero un programa puede utilizar varios procesos que cooperan entre ellos o con procesos de otros sistemas comunicandosé por diferentes medios (ejemplo recursos de Inter Process Communication como pipes, o sockets)
+Cada proceso tiene acceso sólo a su propio espacio de memoria y a recursos de ejecución privados, en teoría es un entorno cerrado. Normalmente los programas se ejecutan como un proceso, pero un solo programa puede utilizar varios procesos que cooperan entre ellos, procesos del mismo o de otros sistemas, comunicandosé por diferentes medios (ejemplos de recursos de IPC, Inter Process Communication son los pipes y los sockets)
 
-Un thread o hilo es similara a un proceso pero con menos recursos, de hecho todo proceso tiene como mínimo un hilo de ejecución, el thread main, pero puede contener varios, la ventaja es que comparten el acceso a los recursos del proceso, por ejemplo el acceso a memoria y los archivos, sin embargo esto es también una desventaja porque requiere resolver el acceso al recurso compartido.
-
+Un thread o hilo es similara a un proceso pero con menos recursos asignados, de hecho todo proceso tiene como mínimo un hilo de ejecución, es el thread main, pero puede contener más, la ventaja de los threads es que comparten el acceso a los recursos del proceso, por ejemplo el acceso a memoria y los archivos, por lo tanto no necesitan comunicarse, sin embargo esto es también una desventaja porque aún así se requiere resolver el acceso al recurso compartido.
 
 # Modelo Cliente-Servidor
 
 # Sockets
 
 # Formato JSON
+
+Formato de texto para el intercambio de datos basado en lenguaje Javascript.
+
+```Javascript
+//ejemplo 1
+{ "clave" : "valor" }
+
+//ejemplo 2
+{ "numeros" : [ 10, 20, 30, 40, 50] }
+
+//ejemplo 3
+{ "objeto" : {  "clave" : "valor",
+                "numeros" : [ 10, 20, 30, 40, 50] }
+}
+```Javascript
