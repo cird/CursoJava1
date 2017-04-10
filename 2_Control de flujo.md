@@ -55,8 +55,6 @@ Cuando se encuentra una coincidencia, se ejecutan las sentencias asociadas hasta
 
 ### for, while, do-while, break, continue
 
-![https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/For-loop-diagram.png/220px-For-loop-diagram.png](https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/For-loop-diagram.png/220px-For-loop-diagram.png)
-
 ### for
 
 Se utiliza para repetir un bloque de código una cantidad de veces determinada.
@@ -73,6 +71,10 @@ Agrupa 3 acciones
 *Inicialización*, Asigna valor inicial a la variable de control del bucle.
 *Condición*, Determina cuando finaliza el bucle, evalúa la expresión antes de cada iteración, si el resultado es falso, finaliza. 
 *Incremento/decremento*, se ejecuta al final de cada iteración para modificar la variable de control en cada iteración.
+
+
+![https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/For-loop-diagram.png/220px-For-loop-diagram.png](https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/For-loop-diagram.png/220px-For-loop-diagram.png)
+
 
 ### while
 Permite repetir la ejecución de un bloque de código, mientras una determinada condición sea cierta, se usa sobretodo cuando la cantidad de iteraciones no se conoce en el momento de programar sino que se define en runtime, es decir, mientras corre el programa.
