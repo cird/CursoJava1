@@ -3,12 +3,6 @@
 
 Herramientas del lenguaje para alterar el orden secuencial de ejecución y para hacer repeticiones, mejor dicho iteraciones, porque nadie se baña dos veces en el mismo río. 
 
-![https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/DiagramaFlujoLampara.svg/324px-DiagramaFlujoLampara.svg.png](https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/DiagramaFlujoLampara.svg/324px-DiagramaFlujoLampara.svg.png)
-
-Fuente: https://es.wikipedia.org/wiki/Diagrama_de_flujo
-
-Ampolleta, bombilla, bombillo, bombita, foco, lámpara, lamparilla o lamparita, son sinónimos
-
 ## if - else
 Se utiliza para expresar decisiones. La expresión dentro del if se evalúa, si el resultado es verdadero se ejecuta sentencia_1, si es falso se ejecuta sentencia_2. En ningún caso se ejecutan ambas.
 
