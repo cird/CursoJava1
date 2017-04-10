@@ -68,9 +68,9 @@ for(inicializacion ; condicion ; incremento/decremento) {
 ```
 Agrupa 3 acciones 
 
-*Inicialización*, Asigna valor inicial a la variable de control del bucle.
-*Condición*, Determina cuando finaliza el bucle, evalúa la expresión antes de cada iteración, si el resultado es falso, finaliza. 
-*Incremento/decremento*, se ejecuta al final de cada iteración para modificar la variable de control en cada iteración.
+*Inicialización*, Asigna valor inicial a la variable de control del bucle.  
+*Condición*, Determina cuando finaliza el bucle, evalúa la expresión antes de cada iteración, si el resultado es falso, finaliza.   
+*Incremento/decremento*, se ejecuta al final de cada iteración para modificar la variable de control en cada iteración.  
 
 
 ![https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/For-loop-diagram.png/220px-For-loop-diagram.png](https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/For-loop-diagram.png/220px-For-loop-diagram.png)
