@@ -15,9 +15,9 @@ Para el caso de bloques queda
 
 ```Java
         if(expresión) {  
-          secuencia de sentencias_1; 
+          sentencias_1; 
         }else{  
-          secuencia de sentencias_2;  
+          sentencias_2;  
         }  
 ```
         
@@ -30,17 +30,17 @@ Esta sentencia compara una variable con una lista de constantes, cuando encuentr
 ```Java
 switch (variable) {  
   case constante_1:  
-        secuencia de sentencias;  
+        sentencias;  
         break;  
   case constante_2:  
-         secuencia de sentencias;  
+         sentencias;  
          break;  
   case constante_3:  
-         secuencia de sentencias;  
+         sentencias;  
          break;  
   ...  
   default:  
-         secuencia de sentencias;  
+         sentencias;  
          break;  
 }  
 ```
@@ -75,7 +75,7 @@ Permite repetir la ejecución de un bloque de código, mientras una determinada 
 while(expresion) {  
     sentencia1;  
     sentencia2;  
-sentenciaN;  
+    sentenciaN;  
 }
 ```
 
