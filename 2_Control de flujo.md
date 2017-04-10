@@ -1,4 +1,9 @@
 
+![https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/DiagramaFlujoLampara.svg/324px-DiagramaFlujoLampara.svg.png](https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/DiagramaFlujoLampara.svg/324px-DiagramaFlujoLampara.svg.png)
+
+Fuente: https://es.wikipedia.org/wiki/Diagrama_de_flujo
+
+
 ## if - else
 Se utiliza para expresar decisiones. La expresión dentro del if se evalúa, si el resultado es verdadero se ejecuta sentencia_1, si es falso se ejecuta sentencia_2. En ningún caso se ejecutan ambas.
 
