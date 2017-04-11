@@ -75,6 +75,7 @@ Agrupa 3 acciones
 
 ![https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/For-loop-diagram.png/220px-For-loop-diagram.png](https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/For-loop-diagram.png/220px-For-loop-diagram.png)
 
+fuente: https://en.wikipedia.org/wiki/For_loop
 
 ### while
 Permite repetir la ejecución de un bloque de código, mientras una determinada condición sea cierta, se usa sobretodo cuando la cantidad de iteraciones no se conoce en el momento de programar sino que se define en runtime, es decir, mientras corre el programa.
