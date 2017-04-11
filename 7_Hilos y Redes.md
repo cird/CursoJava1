@@ -1,10 +1,10 @@
 ## Procesos y Treads
 
-Los programas pueden ejecutar varias tareas conjuntamente, mediante hilos y procesos, si el sistema posee varios procesadores o varios núcleos, pero también con sistemas que tienen un solo nucleo, dividiendo el tiempo de ejecución que le toca a cada una.
+Mediante hilos y procesos los programas pueden ejecutar varias tareas conjuntamente, si el sistema posee varios procesadores o varios núcleos puede hacerlas en paralelo, al mismo tiempo, pero también con sistemas que tienen un solo nucleo, pueden ejecutarse múltiples tareas dividiendo el tiempo de ejecución que le toca a cada una.
 
-Cada proceso tiene acceso sólo a su propio espacio de memoria y a recursos de ejecución privados, en teoría es un entorno cerrado. Normalmente los programas se ejecutan como un proceso, pero un solo programa puede utilizar varios procesos que cooperan entre ellos, procesos del mismo o de otros sistemas, comunicandosé por diferentes medios (ejemplos de recursos de IPC, Inter Process Communication son los pipes y los sockets)
+Cada proceso tiene acceso sólo a su propio espacio de memoria y a recursos de ejecución privados, idealmente es un entorno cerrado. Los programas se ejecutan normalmente como un único proceso, pero también puede utilizar varios procesos que cooperan entre ellos,  del mismo sistema o  de otros mediante alguna comunicación inter proceso IPC ( Inter Process Communication ejemplos: pipes y sockets)
 
-Un thread o hilo es similara a un proceso pero con menos recursos asignados, de hecho todo proceso tiene como mínimo un hilo de ejecución, es el thread main, pero puede contener más, la ventaja de los threads es que comparten el acceso a los recursos del proceso, por ejemplo el acceso a memoria y los archivos, por lo tanto no necesitan comunicarse, sin embargo esto es también una desventaja porque aún así se requiere resolver el acceso al recurso compartido.
+Un thread(o hilo) es similar a un proceso pero tiene menos recursos asignados, todo proceso corre como mínimo un hilo de ejecución, que es el thread main, pero puede contener más, la ventaja de usar threads es que utilizan los recursos que ya posee el proceso, por tanto se pueden crear de una manera más ágil, y como comparten el acceso a los recursos del proceso, por ejemplo el acceso a memoria y los archivos, se puede acceder sin necesidad de comunicación, aún así esto no elimina el problema del acceso al recurso compartido, ni los problemas de sincronización y concurrencia, sea con hilos o con procesos, deberán ser resueltos.
 
 # Modelo Cliente-Servidor
 
