@@ -100,6 +100,6 @@ do {
 ```
 
 # Recursividad 
-
+En llamado recursivo una función se invoca a sí misma, permitiendo reutilizar partes de la función en algún proceso iterativo, se debe preveer alguna condición para que la función en algún momento del proceso deje de llamarse a sí misma para evitar un stackoverflow.
 
 
