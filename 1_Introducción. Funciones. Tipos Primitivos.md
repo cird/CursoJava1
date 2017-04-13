@@ -30,6 +30,8 @@ En este caso se anidan los llamados a función, si reemplazamos cada vez, cada l
 
 Una función podría ser un **productor** de datos, devolviendo resultados sin requerir argumentos de entrada, por ejemplo una función que da la hora; podría ser un **consumidor**, que requiere argumentos de entrada pero no devuelve resultados, por ejemplo una función que imprime en pantalla algún valor ingresado ( en este caso aunque no devuelve explícitamente algo sin embargo acciona la escritura del texto en pantalla, esto ocurre como un *efecto secundario*, el cual en este caso es intencional pero sucede por fuera de la relación entrada/salida, es decir, el resultado no queda en el programa sino que va a parar a la pantalla, que es un periférico de salida, obviamente fuera del programa), finalmente puede haber funciones que no requieren ni entradas, ni devuelven salidas, que simplemente realizan una **acción** ejecutable, por ejemplo una subrutina para esperar un tiempo fijo esperarUnSegundo(), que su efecto es ocupar el procesador por un tiempo.
   
+![/funciones.png](/funciones.png)
+  
 Para definir una función en Java primero se declara el **tipo de dato del resultado** (si no devuelve nada se declara como **void**), luego se escribe el **nombre de la función**, y finalmente la **lista de parámetros de entrada** cada una de las entradas con su tipo correspondiente, entre paréntesis y separados por coma. 
 
 
