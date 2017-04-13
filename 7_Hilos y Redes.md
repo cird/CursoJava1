@@ -1,4 +1,4 @@
-## Procesos y Treads
+## Procesos y Threads
 
 Mediante hilos y procesos los programas pueden ejecutar varias tareas conjuntamente, si el sistema posee varios procesadores o varios núcleos puede hacerlas en paralelo, al mismo tiempo, pero también con sistemas que tienen un solo nucleo, pueden ejecutarse múltiples tareas dividiendo el tiempo de ejecución que le toca a cada una.
 
