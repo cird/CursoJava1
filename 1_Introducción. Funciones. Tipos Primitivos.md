@@ -3,7 +3,7 @@
 
 # Ecosistema del lenguaje
  
-Java es un lenguaje interpretado, esto quiere decir que se ejecuta a través de otro programa y no directamente en el sistema, ese otro programa, el intérprete, en este caso es la máquina virtual java (JVM) que permite correr el mismo programa Java en diferentes arquitecturas, siempre que el sistema tenga instalada la máquina virtual correspondiente. ¿Por qué se llama máquina virtual y no intérprete? porque un programa en Java requiere compilación antes de ser ejecutable, a diferencia de otros lenguajes interpretados que sí corren tal como fueron escritos (ej. Python, Javascript), la máquina virtual no interpreta el código Java directamente, sino a través de los bytecodes que son instrucciones para la JVM generadas por el compilador **javac**(java compiler).
+Java es un lenguaje interpretado, esto quiere decir que se ejecuta a través de otro programa y no directamente en el sistema; en Java ese otro programa "intérprete" es la JVM (Máquina Virtual Java) y permite correr el mismo programa en diferentes arquitecturas, siempre y cuando el sistema tenga instalada la máquina virtual correspondiente. ¿Por qué se llama máquina virtual y no intérprete? porque Java requiere que el programa sea compilado antes de ser ejecutable, a diferencia de otros lenguajes interpretados que sí corren tal como fueron escritos (ej. Python, Javascript), la máquina virtual no interpreta el código Java directamente, sino a través de bytecodes que son instrucciones para la JVM generadas por el compilador **javac**(java compiler).
 
 ![http://docs.oracle.com/javase/tutorial/figures/getStarted/helloWorld.gif](http://docs.oracle.com/javase/tutorial/figures/getStarted/helloWorld.gif)  
 Imagen de http://docs.oracle.com
@@ -13,26 +13,37 @@ Imagen de http://docs.oracle.com
 
 3.1 Funciones
 
-Las funciones describen procesos específicos, utilizan valores de entradas y luego de su ejecución dan como salida resultados (en general en relación con esas entradas), son uno de los bloques básicos para componer un programa. Se invocan simplemente mediante su nombre y las entradas entre paréntesis, pudiendo ser utilizadas desde otras funciones, las cuales a su vez pueden invocar a otras, etc..
+Las funciones describen procesos específicos, utilizan valores de entradas y luego de su ejecución dan como salida resultados (en general en relación con las entradas), son unos de los bloques básicos para componer un programa. Se invocan simplemente mediante su nombre y entre paréntesis las entradas, dentro del cuerpo de una función donde se describe su comportamiento puede a su vez invocarse a otras funciones, etc..
 
 Por ejemplo al calcular una multiplicación a partir de la entrada de dos números.
+
 ```Java
 resultado = multiplicar (2,3);
 ```
 
-Las entradas se ingresan entre paréntesis y separadas por comas (2,3); si una función no admite entradas los paréntesis se ponen vacíos (). Luego de procesar ese cálculo obtendremos resultado, en este caso = 6, que se asignará el valor a la variable de la izquierda, es decir, después de procesada, es reemplazada por su resultado correspondiente en tiempo de ejecución (runtime), además de otros *efectos secundario* que pueda tener la función.
+Las entradas entre paréntesis y separadas por comas (2,3); son procesadas por la función, si no admite entradas los paréntesis se ponen vacíos (). Luego de procesar el cálculo obtendremos un resultado, en este caso = 6, valor que se asignará a la variable de la izquierda, es decir, una función después de procesada, es reemplazada por su resultado correspondiente durante el tiempo de ejecución (runtime).
 
-Otro ejemplo ¿Qué valor se almacena en la variable resultado?
+Ejemplo ¿Qué valor se almacena en la variable resultado?
 
+```Java
 resultado = multiplicar (multiplicar (2,5), multiplicar (3,5)) ;
+```
 
-En este caso se anidan los llamados a función, si reemplazamos cada vez, cada llamado por su resultado, la función se invoca tres veces y el resultado final es 150. 
+En este caso se anidan los llamados a función, si reemplazamos cada vez al llamado por su resultado, la función se invoca tres veces y el resultado final es 150. 
 
-Una función podría ser un **productor** de datos, devuelve resultados sin argumentos de entrada, por ejemplo una función que da la hora; podría ser un **consumidor**, requiere argumentos de entrada pero *no* devuelve resultados, un ejemplo es una función que imprime algo en pantalla ( en este caso aunque no devuelve explícitamente algo sí acciona la escritura del texto en pantalla, esto ocurre como un *efecto secundario*, en este caso intencional pero sucede por fuera de la relación entrada/salida, es decir, ese resultado no queda en el programa sino que va a parar a la pantalla), finalmente puede haber funciones que no tienen ni entradas, ni dan salidas, simplemente realizan una **acción** ejecutable, por ejemplo una subrutina para esperar un tiempo fijo esperarUnSegundo(), su efecto es ocupar el procesador por un tiempo.
-  
+Una función puede ser un **productor** de datos, que devuelve resultados sin argumentos de entrada, por ejemplo una función que da la hora; ```obtenerHora()```, o un **consumidor**, que requiere argumentos de entrada pero *no* devuelve resultados, como ejemplo es una función que almacena datos en disco ```guardarDato(dato)``` o imprime en pantalla ```imprimir("hola")```, y también hay funciones que no tienen ni entradas, ni salidas, y simplemente realizan una **acción** ejecutable, por ejemplo una subrutina para esperar un tiempo fijo ```esperarUnSegundo()```, su efecto es ocupar el procesador por un tiempo.
+
 ![funciones.png](funciones.png)
+
+## Efectos secundarios
+
+Si al ejecutar una función ocurren cambios por fuera de la relación entrada/salida se dice que tiene *efectos secundarios* o *colaterales* es decir que modifican el estado del sistema, pueden afectar variables internas, o dispositivos de salida. Por ejemplo la función ```imprimirEnPantalla("algo")``` producirá cambios en la pantalla.
+
+Una función que no produce efectos secundarios, y además es coherente, es decir, que sólo produce resultados iguales para entradas iguales se llama función pura, aunque en la práctica todas las funciones tienen "efectos secundarios" ya que todas consumen energía y tiempo para ejecutarse, lo cual produce cambios en el sistema y en el ambiente, el nombre "función pura" se usa en referencia al estado lógico del sistema. 
   
-Para definir una función en Java primero se declara el **tipo de dato del resultado** (si no devuelve nada se declara como **void**), luego se escribe el **nombre de la función**, y finalmente la **lista de parámetros de entrada** cada una de las entradas con su tipo correspondiente, entre paréntesis y separados por coma. 
+## Cómo escribir una función 
+
+Para definir una función en Java primero se declara el **tipo de dato del resultado**, si no devuelve nada se declara como **void**, luego se escribe el **nombre de la función**, y finalmente la **lista de parámetros de entrada**, cada una de las entradas con su tipo correspondiente, entre paréntesis y separados por coma. 
 
 
 ```Java
@@ -55,7 +66,6 @@ int sumar( int a, int b){
         return a+b;
 }
 ```
-
 
 El cuerpo de la función es la descripción del proceso que realiza, y se escribe entre llaves **{ }** que sirven para demarcar bloques de código. En este caso como la función devuelve un valor necesita invocar la sentencia **return** que especifica cuál es el valor que la función va a devolver como resultado. 
 
@@ -84,7 +94,7 @@ Las expresiones son combinaciones de operadores, llamados a función, asignacion
 
 ```
 
-Las sentencias pueden agruparse en bloques que además definen un alcance para las variables. 
+Las sentencias se pueden agrupar en bloques que definen además un alcance para las variables. 
 
 # Tipos de datos Primitivos:
 
