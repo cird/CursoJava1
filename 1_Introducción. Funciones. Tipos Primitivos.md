@@ -98,26 +98,26 @@ Las sentencias se pueden agrupar en bloques que definen además un alcance para 
 
 # Tipos de datos Primitivos:
 
-### short:
+No se recomiendan en general, pero aún pueden/deben usarse en casos especiales extremadamente simples o muy específicos.
+
+### short
 Permite almacenar un valor entero con signo de 16-bit desde -32768 a hasta 32767 inclusive. 
-### int:
+### int
 Por default permite un valor entero con signo de 32-bit de -2^31 and a maximum value of 2^31-1. 
-### long:
+### long
 Por default permite un valor entero con signo de 64-bit de -2^63 a 2^63-1. 
-### float:
+### float
 Permite almacenar valores con coma flotante de precisión simple, formato 32-bit IEEE 754
-### double:
+### double
 Permite almacenar valores con coma flotante de precisión doble, formato 64-bit IEEE 754 
-### boolean:
+### boolean
 Puede almacenar un valor, de solo dos posibles: true o false. 
-### byte: 
+### byte
 Almacena un valor entero de 8-bit, desde -128 and a hasta 127 inclusive. 
-### char:
+### char
 Permite almacenar un valor Unicode de 16-bit desde  '\u0000' (or 0) a '\uffff' 65535.
 
 Todos los tipos numéricos primitivos son con signo, lamentablemente en java todos tienen signo, el formato es en complemento a dos (la representación binaria internat de los negativos es como la de un positivo pero invirtiendo todos los bits y sumando uno, esto facilita internamente algunas operaciones comunes). Desde Java 8 se proveen algunas funciones para tratar int y long como si fueran sin signo.
-
-No se recomiendan usar. Aún pueden usarse en casos especiales extremadamente simples o muy específicos.
 
 
 # Tipo String
