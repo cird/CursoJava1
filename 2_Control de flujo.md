@@ -1,7 +1,7 @@
 
 # Decisiones y Repeticiones
 
-Herramientas del lenguaje para alterar el orden secuencial de ejecución y para hacer repeticiones, mejor dicho iteraciones, porque nadie se baña dos veces en el mismo río. 
+El lenguaje provee herramientas para alterar el orden secuencial de ejecución y para hacer repeticiones, mejor dicho iteraciones, porque nadie se baña dos veces en el mismo río. 
 
 ## if - else
 Se utiliza para expresar decisiones. La expresión dentro del if se evalúa, si el resultado es verdadero se ejecuta sentencia_1, si es falso se ejecuta sentencia_2. En ningún caso se ejecutan ambas.
@@ -13,7 +13,7 @@ Se utiliza para expresar decisiones. La expresión dentro del if se evalúa, si 
           sentencia_2;  
 ```
 
-La cláusula else es opcional. sentencia_1 y sentencia_2 pueden ser una sentencia simples o bloques. 
+La cláusula **else** es opcional. sentencia_1 y sentencia_2 pueden ser una sentencia simples o bloques. 
 
 Para el caso de bloques queda
 
@@ -29,7 +29,7 @@ Si bien se *pueden* "anidar" if's, es decir se pueden poner a la vez otros if-el
 
 ## switch
 
-Esta sentencia compara una variable con una lista de constantes, cuando encuentra una correspondencia ejecuta la sentencia o el bloque de sentencias asignado a esa constante.
+La sentencia **switch** compara una variable con una lista de constantes posibles, cuando encuentra una coincidencia ejecuta el bloque de sentencias correspondiente a la constante del **case**, si luego de evaluar todos los **case** no se encuentra ninguna coincidencia ejecuta el código bajo la sentencia **default**
 
 ```Java
 switch (variable) {  
@@ -49,7 +49,7 @@ switch (variable) {
 }  
 ```
 
-Cuando se encuentra una coincidencia, se ejecutan las sentencias asociadas hasta encontrar la sentencia **break**, en ausencia de **break** el programa sigue adelante hasta encontrar un break o la llave de cierre del switch, por ende, podríamos estar ejecutando más de un case por error. La sentencia default se ejecuta si no se encuentra ninguna correspondencia luego de evaluar todos los **case**. Con **switch** solo se puede comprobar la igualdad, no se pueden evaluar expresiones relacionales o lógicas. Dentro de un switch no puede haber dos constantes con los mismos valores. **switch** también permite anidar otras sentencias switch, pero tampoco es recomendable.
+Cuando coincide la variable con la constante se ejecutan las sentencias correspondientes hasta encontrar **break**, en ausencia de la sentencia **break** el programa sigue adelante hasta encontrar la llave de cierre del switch, esto puede producir errores si falta algún **break** se puede ejecutar también el **case** siguiente por error. **switch** sólo chequea igualdad, no evalua expresiones relacionales o lógicas, tampoco puede haber dos constantes con los mismos valores. A partir de Java 7, se pueden usar también Strings.
 
 ## Bucles
 
@@ -68,9 +68,9 @@ for(inicializacion ; condicion ; incremento/decremento) {
 ```
 Agrupa 3 acciones 
 
-*Inicialización*, Asigna valor inicial a la variable de control del bucle.  
-*Condición*, Determina cuando finaliza el bucle, evalúa la expresión antes de cada iteración, si el resultado es falso, finaliza.   
-*Incremento/decremento*, se ejecuta al final de cada iteración para modificar la variable de control en cada iteración.  
+*Inicialización*, asigna valor inicial a la variable de control del bucle.  
+*Condición*, determina cuando finaliza el bucle, evalúa la expresión *antes* de cada iteración, si el resultado es falso, finaliza.   
+*Incremento/decremento*, se ejecuta *después* de cada iteración para modificar la variable de control en cada iteración.  
 
 
 ![https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/For-loop-diagram.png/220px-For-loop-diagram.png](https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/For-loop-diagram.png/220px-For-loop-diagram.png)
@@ -78,7 +78,8 @@ Agrupa 3 acciones
 fuente: https://en.wikipedia.org/wiki/For_loop
 
 ### while
-Permite repetir la ejecución de un bloque de código, mientras una determinada condición sea cierta, se usa sobretodo cuando la cantidad de iteraciones no se conoce en el momento de programar sino que se define en runtime, es decir, mientras corre el programa.
+
+Permite repetir la ejecución de un bloque de código, mientras una determinada condición sea cierta, se usa sobretodo cuando la cantidad de iteraciones no se conoce al momento de programar sino que se define en runtime, es decir, mientras corre el programa.
 
 ```Java
 while(expresion) {  
@@ -89,7 +90,7 @@ while(expresion) {
 ```
 
 ### do-while
-El bucle do-while examina la condición al final del mismo. Entonces un bucle do-while se ejecute al menos una vez. ( en cambio while y for que comprueban la condición antes de ingresar al bucle)
+El bucle do-while examina la condición recién al final del mismo, por lo que un bucle do-while se ejecuta al menos una vez ( a diferencia de **while** y **for** que pueden no ejecutarse ninguna vez porque comprueban la condición antes de ingresar al bucle)
 
 ```Java
 do {  
@@ -100,6 +101,6 @@ do {
 ```
 
 # Recursividad 
-En llamado recursivo una función se invoca a sí misma, permitiendo reutilizar partes de la función en algún proceso iterativo, se debe preveer alguna condición para que la función en algún momento del proceso deje de llamarse a sí misma para evitar un stackoverflow.
+En un llamado recursivo una función se invoca a sí misma, permitiendo reutilizar partes de la función en algún proceso iterativo, se debe preveer alguna condición para que la función deje de llamarse a sí misma en algún momento del proceso para evitar un stackoverflow.
 
 
