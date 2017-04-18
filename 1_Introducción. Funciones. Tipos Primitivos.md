@@ -11,7 +11,7 @@ Imagen de http://docs.oracle.com
 
 # Funciones, Operadores
 
-3.1 Funciones
+## Funciones
 
 Las funciones describen procesos específicos, utilizan valores de entradas y luego de su ejecución dan como salida resultados (en general en relación con las entradas), son unos de los bloques básicos para componer un programa. Se invocan simplemente mediante su nombre y entre paréntesis las entradas, dentro del cuerpo de una función donde se describe su comportamiento puede a su vez invocarse a otras funciones, etc..
 
