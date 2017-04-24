@@ -35,6 +35,10 @@ Una función puede ser un **productor** de datos, que devuelve resultados sin ar
 
 ![funciones.png](funciones.png)
 
+### Operadores
+
+Ciertas funciones básicas ya vienen incorporadas en el lenguaje como "operadores", que pueden ser unarios(una entrada), binarios (dos entradas), ternarios(tres entradas), la suma (**+**), la multiplicación (**\***), la división (**/**), el módulo o resto de la división(**%**), las comparaciones (**<**,**>**,**<=**,**>=**,**==**) son ejemplos de operadores binarios. El operador NOT, para negación lógica (**!**), o el operador NOT para inversión bit a bit (**~**) son ejemplos de operadores unarios. El operador (**?**) es un operador *ternario* para hacer asignaciones condicionales,  ejemplo ```Java estado = (temperatura>30)?"caliente":"frío"; ```
+
 ## Efectos secundarios
 
 Si al ejecutar una función ocurren cambios por fuera de la relación entrada/salida se dice que tiene *efectos secundarios* o *colaterales* es decir que modifican el estado del sistema, pueden afectar variables internas, o dispositivos de salida. Por ejemplo la función ```imprimirEnPantalla("algo")``` producirá cambios en la pantalla.
@@ -43,7 +47,7 @@ Una función que no produce efectos secundarios, y además es coherente, es deci
   
 ## Cómo escribir una función 
 
-Para definir una función en Java primero se declara el **tipo de dato del resultado**, si no devuelve nada se declara como **void**; luego se escribe el **nombre de la función**; y finalmente la **lista de parámetros de entrada**, cada entrada con su tipo correspondiente, todas entre paréntesis y separadas por coma. 
+Para definir una función en Java primero se declara el **tipo de dato del resultado**\*; luego el **nombre de la función**; y finalmente la **lista de parámetros de entrada**, cada entrada con su tipo correspondiente, todas entre paréntesis y separadas por coma.  (*si la función no devuelve resultado se declara como **void**)
 
 
 ```Java
@@ -69,7 +73,7 @@ int sumar( int a, int b){
 
 El cuerpo de la función es la descripción del proceso que realiza y se escribe entre llaves **{ }** que sirven para demarcar bloques de código. En este caso como la función devuelve un valor necesita invocar la sentencia **return** que especifica cuál es el valor que la función va a devolver como resultado. 
 
-Hay una función especial, cuyo nombre está reservado: la función **main**. A diferencia de las demás funciones que para invocarlas hay que poner el nombre y los argumentos en el programa, a la función **main** no hace falta llamarla, basta con que esté implementada y será llamada automáticamente por el sistema al arrancar el programa. Es la primera función que se ejecuta. Puede haber varias funciones main en un programa pero solo una se elegirá como punto de arranque, *entry point*. Dentro la función main se pueden escribir llamados a demás funciones, sentencias y expresiones.
+Hay una función especial, cuyo nombre está reservado: la función **main**. A diferencia de las demás funciones que para invocarlas hay que poner el nombre y los argumentos en el programa, a la función **main** no hace falta llamarla, basta con que esté implementada y será llamada automáticamente por el sistema al arrancar el programa. Es la primera función que se ejecuta. Puede haber varias funciones main en un programa pero solo una se elegirá como punto de arranque, *entry point*. Dentro de la función main se pueden escribir otros llamados a funciones, sentencias y expresiones.
 
 ```Java
 public static void main(String args[]){	
@@ -117,12 +121,12 @@ Almacena un valor entero de 8-bit, desde -128 and a hasta 127 inclusive.
 ### char
 Permite almacenar un valor Unicode de 16-bit desde  '\u0000' (or 0) a '\uffff' 65535.
 
-Todos los tipos numéricos primitivos son con signo, lamentablemente en java todos tienen signo, el formato es en complemento a dos (la representación binaria internat de los negativos es como la de un positivo pero invirtiendo todos los bits y sumando uno, esto facilita internamente algunas operaciones comunes). Desde Java 8 se proveen algunas funciones para tratar int y long como si fueran sin signo.
+Todos los tipos numéricos primitivos son con signo, lamentablemente en java todos tienen signo, el formato es en complemento a dos (la representación binaria interna de los negativos es como la de un positivo pero invirtiendo todos los bits y sumando uno, esta representación facilita internamente algunas operaciones comunes). Desde Java 8 se proveen funciones para tratar int y long como si fueran sin signo.
 
 
 # Tipo String
 
-Los Strings, o cadenas de caracteres, no son un tipo básico pero tienen facilidades para crearlos como si lo fueran. Internamente una vez creada una variable String no puede modificarse, o mejor dicho, cuando se modifica un String internamente se crea otra variable nueva.
+Los Strings, o cadenas de caracteres, no son un tipo básico pero Java provee facilidades para crearlos como si lo fueran. Internamente una vez creada una variable String no puede modificarse, o mejor dicho, cuando se modifica un String internamente se crea otra variable nueva.
  
  ```Java
  String texto = "Esta es una variable que almacena texto";
