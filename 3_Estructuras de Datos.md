@@ -13,10 +13,10 @@ Un **espacio de nombres** es un contexto donde los nombres de referencia son ún
 
 ## Estructuras de datos.
 
-Los **arrays** en Java no son tipos primitivos sino de referencia, por lo tanto no pueden copiarse mediante asignación, tienen además la propiedad **length** que contiene la cantidad de elementos del array.
-
 #### Arreglo
-El arreglo es un objeto contenedor básico para un conjunto ordenado de valores fijos de un mismo tipo. La cantidad de elementos del arreglo es fija y se establece al momento que se crea.
+
+El arreglo/array es un objeto contenedor básico para un conjunto ordenado de valores fijos de un mismo tipo. La cantidad de elementos del arreglo es fija y se establece al momento que se crea. Los **arrays** en Java no son tipos primitivos sino de referencia, por lo tanto no pueden copiarse mediante asignación, tienen además la propiedad **length** que contiene la cantidad de elementos del array.
+
 
 ```Java
 int[] anArray = new int[10];
