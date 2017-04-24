@@ -7,11 +7,11 @@ La estructura del objeto se define mediante la **clase** a la que pertenece.
 
 Los objetos tienen *estado* y *comportamiento*.
 
-El **estado** se almacena en **campos**(fields), estos son datos propios de la clase que usa internamente y **propiedades** que pueden modificarse externamente.
-
 El **comportamiento** se define mediante **funciones** propias de la clase llamadas **métodos**
- 
-El **encapsulamiento** evita accesos indebidos. El volumen interno (privado)  y la superficie visible (público) , junto a otros modificadores, permiten regular la exposición de componentes internos. Ejemplo
+
+El **estado** se almacena en **campos**(fields) que usa internamente y **propiedades** que pueden modificarse externamente.
+
+El **encapsulamiento** evita accesos indebidos. El volumen interno (privado) y la superficie visible (público), junto a otros modificadores, permiten regular la exposición de componentes. Ejemplo
 
 ```Java
 class Cohete{
