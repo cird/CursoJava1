@@ -24,7 +24,7 @@ int[] arreglo = new int[10];
 System.out.println(" Tamaño array : " + arreglo.length);
 ```
 
-!(https://docs.oracle.com/javase/tutorial/figures/java/objects-tenElementArray.gif)[https://docs.oracle.com/javase/tutorial/figures/java/objects-tenElementArray.gif]
+![https://docs.oracle.com/javase/tutorial/figures/java/objects-tenElementArray.gif](https://docs.oracle.com/javase/tutorial/figures/java/objects-tenElementArray.gif)
 
 fuente: https://docs.oracle.com
 
