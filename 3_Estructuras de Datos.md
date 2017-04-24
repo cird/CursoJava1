@@ -19,7 +19,9 @@ El arreglo/array es un objeto contenedor básico para un conjunto ordenado de va
 
 
 ```Java
-int[] anArray = new int[10];
+int[] arreglo = new int[10];
+
+System.out.println(" Tamaño array : " + arreglo.length);
 ```
 
 !(https://docs.oracle.com/javase/tutorial/figures/java/objects-tenElementArray.gif)[https://docs.oracle.com/javase/tutorial/figures/java/objects-tenElementArray.gif]
