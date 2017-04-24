@@ -4,7 +4,7 @@
 El lenguaje provee herramientas para alterar el orden secuencial de ejecución y para hacer repeticiones, mejor dicho iteraciones, porque nadie se baña dos veces en el mismo río. 
 
 ## if - else
-Se utiliza para expresar decisiones. La expresión dentro del if se evalúa, si el resultado es verdadero se ejecuta sentencia_1, si es falso se ejecuta sentencia_2. En ningún caso se ejecutan ambas.
+Se utiliza para expresar condiciones, decisiones según alguna condición. La expresión dentro del if se evalúa, y define el camino a seguir, si el resultado es verdadero se ejecuta sentencia_1, si es falso se ejecuta sentencia_2. En ningún caso se ejecutan ambas.
 
 ```Java
         if(expresión)  
@@ -25,11 +25,11 @@ Para el caso de bloques queda
         }  
 ```
         
-Si bien se *pueden* "anidar" if's, es decir se pueden poner a la vez otros if-else dentro de alguno de los bloques if-else, no se aconsejan anidar demasiados if's, vuelven el código menos legible.
+Se recomienda usar llaves siempre para evitar ambiguedades. Si bien se *pueden* "anidar" if's, es decir se pueden poner a la vez otros if-else dentro de alguno de los bloques if-else, no se aconsejan anidar demasiados if's, ya que hacen al código menos legible.
 
 ## switch
 
-La sentencia **switch** compara una variable con una lista de constantes posibles, cuando encuentra una coincidencia ejecuta el bloque de sentencias correspondiente a la constante del **case**, si luego de evaluar todos los **case** no se encuentra ninguna coincidencia ejecuta el código bajo la sentencia **default**
+La sentencia **switch** compara una variable con una lista de constantes posibles. Cuando encuentra una coincidencia ejecuta el bloque de sentencias que siguen al **case** correspondiente, y si luego de evaluar todos los **case** no se encuentra ninguna coincidencia ejecuta el código bajo la sentencia **default**. Normalmente las constantes son numéricas, y a partir de Java 7, se pueden usar Strings.
 
 ```Java
 switch (variable) {  
@@ -49,7 +49,7 @@ switch (variable) {
 }  
 ```
 
-Cuando coincide la variable con la constante se ejecutan las sentencias correspondientes hasta encontrar **break**, en ausencia de la sentencia **break** el programa sigue adelante hasta encontrar la llave de cierre del switch, esto puede producir errores si falta algún **break** se puede ejecutar también el **case** siguiente por error. **switch** sólo chequea igualdad, no evalua expresiones relacionales o lógicas, tampoco puede haber dos constantes con los mismos valores. A partir de Java 7, se pueden usar también Strings.
+Las sentencias se ejecutan hasta encontrar **break**; en ausencia de la sentencia **break** el programa sigue adelante hasta encontrar la llave de cierre del switch, si dentro de un **case** falta algún **break** se ejecutará también el **case** siguiente, esto puede ser intencional cuando queremos que dos constantes lleven a la misma acción, o por error (olvidarse de poner **break**. El bloque **switch** sólo chequea por igualdad, no evalua expresiones relacionales o lógicas, por lo que no puede haber dos case con constantes con los mismos valores. 
 
 ## Bucles
 
@@ -79,7 +79,7 @@ fuente: https://en.wikipedia.org/wiki/For_loop
 
 ### while
 
-Permite repetir la ejecución de un bloque de código, mientras una determinada condición sea cierta, se usa sobretodo cuando la cantidad de iteraciones no se conoce al momento de programar sino que se define en runtime, es decir, mientras corre el programa.
+Permite repetir la ejecución de un bloque de código, mientras una determinada condición sea cierta, se usa sobretodo cuando la cantidad de iteraciones no se conoce al momento de programar sino que se define en *runtime*, es decir, mientras corre el programa.
 
 ```Java
 while(expresion) {  
@@ -90,7 +90,7 @@ while(expresion) {
 ```
 
 ### do-while
-El bucle do-while examina la condición recién al final del mismo, por lo que un bucle do-while se ejecuta al menos una vez ( a diferencia de **while** y **for** que pueden no ejecutarse ninguna vez porque comprueban la condición antes de ingresar al bucle)
+El bucle do-while examina la condición recién al final del bloque, por lo que un bucle do-while se ejecuta al menos una vez ( a diferencia de **while** y **for** que pueden no ejecutarse ninguna vez ya que comprueban la condición antes de ingresar al bucle)
 
 ```Java
 do {  
