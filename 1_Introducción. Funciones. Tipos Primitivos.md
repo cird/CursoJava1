@@ -107,7 +107,7 @@ No se recomiendan en general, pero aún pueden/deben usarse en casos especiales 
 ### short
 Permite almacenar un valor entero con signo de 16-bit desde -32768 a hasta 32767 inclusive. 
 ### int
-Por default permite un valor entero con signo de 32-bit de -2^31 and a maximum value of 2^31-1. 
+Por default permite un valor entero con signo de 32-bit desde -2^31 hasta 2^31-1. 
 ### long
 Por default permite un valor entero con signo de 64-bit de -2^63 a 2^63-1. 
 ### float
@@ -121,7 +121,7 @@ Almacena un valor entero de 8-bit, desde -128 and a hasta 127 inclusive.
 ### char
 Permite almacenar un valor Unicode de 16-bit desde  '\u0000' (or 0) a '\uffff' 65535.
 
-Todos los tipos numéricos primitivos son con signo, lamentablemente en java todos tienen signo, el formato es en complemento a dos (la representación binaria interna de los negativos es como la de un positivo pero invirtiendo todos los bits y sumando uno, esta representación facilita internamente algunas operaciones comunes). Desde Java 8 se proveen funciones para tratar int y long como si fueran sin signo.
+Todos los tipos numéricos primitivos son con signo, lamentablemente en Java todos tienen signo, el formato es en complemento a dos (la representación binaria interna de los negativos es como la de un positivo pero invirtiendo todos los bits y sumando uno, esta representación facilita internamente algunas operaciones comunes). Desde Java 8 se proveen funciones para tratar int y long como si fueran sin signo.
 
 
 # Tipo String
