@@ -42,14 +42,14 @@ switch (variable) {
   case constante_3:  
          sentencias;  
          break;  
-  ...  
+  //...  
   default:  
          sentencias;  
          break;  
 }  
 ```
 
-Las sentencias se ejecutan hasta encontrar **break**; en ausencia de la sentencia **break** el programa sigue adelante hasta encontrar la llave de cierre del switch, si dentro de un **case** falta algún **break** se ejecutará también el **case** siguiente, esto puede ser intencional cuando queremos que dos constantes lleven a la misma acción, o por error (olvidarse de poner **break**. El bloque **switch** sólo chequea por igualdad, no evalua expresiones relacionales o lógicas, por lo que no puede haber dos case con constantes con los mismos valores. 
+Las sentencias se ejecutan hasta encontrar **break**; en ausencia de la sentencia **break** el programa sigue adelante hasta encontrar la llave de cierre del switch, si dentro de un **case** falta algún **break** se ejecutará también el **case** siguiente, esto puede ser intencional cuando queremos que dos constantes lleven a la misma acción, o por error (olvidarse de poner **break**). El bloque **switch** sólo chequea por igualdad, no evalua expresiones relacionales o lógicas, por lo que no puede haber dos case con constantes de igual valor.
 
 ## Bucles
 
