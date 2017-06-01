@@ -12,8 +12,9 @@ Un **espacio de nombres** es un contexto donde los nombres son únicos, por ejem
 
 ### Modificadores de control de acceso
 
-Los modificadores de acceso permiten tener algún control sobre la visibilidad de una variable o función.
-Los miembros de clase, variables o métodos, pueden aceptar estos modificadores:
+Permiten tener algún control sobre la visibilidad de una variable o función.
+
+Los *miembros* de clase, variables o métodos, pueden aceptar estos modificadores:
 
 **public**    : desde cualquier lado.  
 **protected** : solo desde el mismo package (excepción: cuando es una sub-clase permite desde otros packages).  
@@ -26,22 +27,22 @@ En lo posible, usar private, salvo en casos especiales.
 
 ### Otros modificadores 
 
-**final**
-Lo definido como final no puede cambiar:
+####final
+Lo definido como final no puede cambiar  
 
 A una *clase* final, no se la puede extender.  
 A un *método* final, no se lo puede sobreescribir desde una subclase.  
 A una *variable primitiva* final, no se le puede cambiar el valor.  
 A una *variable de referencia* final, no se le puede cambiar su referencia (siempre refiere al mismo, aunque este sí pueda variar internamente).  
 
-**static**
+####static
 static define métodos o variables a nivel de clase (es decir, válidos para toda la clase)
 
-**abstract**
+####abstract
 
-**synchronized**
+####synchronized
 
-**volatile**
+####volatile
 
 
 ## Estructuras de datos.
