@@ -60,7 +60,7 @@ int multiplicar( int a, int b) {
 int sumar( int a, int b){
         int result;        
         result = a+b;        
-        return resultado;
+        return result;
 }
 ```
 O la misma función de manera más sencilla 
