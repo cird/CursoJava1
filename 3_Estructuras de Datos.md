@@ -1,12 +1,33 @@
 ## Variables y Alcance
 
-Un **espacio de nombres** es un contexto donde los nombres son únicos, por ejemplo en una carpeta no puede haber archivos con el mismo nombre, pero sí pueden estar en carpetas diferentes; en Java el espacio de nombres se llama **package** y permite organizar ahí las Interfaces y Clases, generalmente agrupadas por funcionalidad.
-
 #### Variables 
   - **de instancia**, pertenecen a objetos  
   - **de clase**, valen para toda la clase, se declaran como ***static***  
   - **locales**, son de uso interno de una función o bloque.  
   - **parámetros**, son las usadas en los argumentos de una función.  
+
+#### Package
+
+Un **espacio de nombres** es un contexto donde los nombres son únicos, por ejemplo en una carpeta no puede haber archivos con el mismo nombre, deberemos cambiarlo o ponerlos en carpetas diferentes; en Java la jerarquía más alta del espacio de nombres se llama **package** y permite organizar ahí las Interfaces y Clases, se agrupan por funcionalidad,  cuando están relacionadas pertenecen a un mismo package, y se parece a un arbol de directorio, tal cual están organizadas las carpetas en un sistema de archivos, de hecho los packages se almacenan en carpetas separadas.
+
+Entonces en los mismos packages no pueden repetirse los mismos nombres de las clases, ni dentro de una clase, los nombres de sus miembros, ni dentro de un bloque los nombres de las variables.
+
+```Java
+
+package com.empresa.test;
+
+```
+
+### import
+
+La palabra **import** permite trabajar con nombres de clases y de objetos *como si* estuvieran en el mismo package, evita que tengamos que escribir el nombre completo cada vez, y el programa queda más legible, por ejemplo para a la clase Array, si se pone import java.util.Array; al inicio del archivo, ya no hará falta escribir java.util.Array cada vez que se usa, bastará poner Array, como desventaja justamente ya no se podrá usar ese nombre internamente, el compilador lo verá como repetido, otro posible problema es cometer un error al escribir el import ya que suele haber varios packages con clases del mismo nombre.
+
+```Java
+
+import java.util.Array;
+
+```
+
 
 ## Modificadores
 
