@@ -3,35 +3,38 @@
 
 ## Objetos y Clases
 
-La estructura del objeto se define mediante la **clase** a la que pertenece.
+La estructura del objeto se define mediante la **clase** a la que pertenece. Define lo que puede ser y hacer.
 
-Los objetos tienen *estado* y *comportamiento*.
+Los objetos de una clase tienen *estado* y *comportamiento*, es decir, lo que son y lo que hacen.
 
-El **comportamiento** se define mediante **funciones** propias de la clase llamadas **métodos**
+El **comportamiento** se define mediante **funciones** internas llamadas **métodos**
 
-El **estado** se almacena en **campos**(fields) que usa internamente y **propiedades** que pueden modificarse externamente.
+El **estado** se almacena en **campos**(fields) de uso interno y **propiedades** visibles a modificaciones externas.
 
-El **encapsulamiento** evita accesos indebidos. El volumen interno (privado) y la superficie visible (público), junto a otros modificadores, permiten regular la exposición de componentes. Ejemplo
+Para evitar accesos indebidos se utiliza **encapsulamiento**. Mediante modificadores, que permiten regular la exposición de componentes, se define cuál es el contenido interno, volumen privado del objeto y la superficie visible, lo público. Ejemplo
 
 ```Java
-class Cohete{
-public void lanzarCoheteSeguro(){
-           if( verificarSistemasDeSeguridad() ){           
-              lanzarCohete();
-           }  
-          
-private lanzarCohete(){
-          //...
+class Cohete {
+        public void lanzarCoheteSeguro() {
+            if (verificarSistemasDeSeguridad()) {
+                lanzarCohete();
+            }          
+        private lanzarCohete() {
+            //...
+        }
+    }
 }
-}}
 ```
-El método lanzarCohete() **NO** debe ser accesible desde afuera del diseño de la clase,  la seguridad antes del lanzamiento, si no se debe permitir ni siquiera por error que sea accionado sin chequear la seguridad, entonces sencillamente no debe ser posible hacerlo, para eso el lenguaje da herramientas de control de alcance, como las palabras public y private, entre otras. 
+El método lanzarCohete() **NO** debe ser accesible desde afuera del diseño de la clase, la seguridad DEBE chequearse *antes* del lanzamiento, por lo tanto ¿cómo evitar que sea accionado directamente sin el chequeo previo?, para que no ocurra ni siquiera por error sencillamente no debe ser posible hacerlo, para esto el lenguaje provee herramientas de control de scope/alcance, como las palabras public y private, entre otras, que si intentamos hacer el llamado directo darán un error de compilación.
 
-El **polimorfismo** permite trabajar con objetos genéricos. Ejemplo:
+El **polimorfismo** es lo que permite trabajar con objetos genéricos. Ejemplo:
+
+
 
 # Tipos de datos de Referencia
-El acceso a los objetos (y a sus métodos y atributos, etc..) se hace mediante referencias, por ejemplo, al crear un objeto de una determinada clase, lo que se llama una instancia de la clase, obtendremos una *referencia* al objeto y la podemos asignar a una variable, que será de tipo referencia obviamente. 
-Una diferencia con los tipos *primitivos* es que las asignaciones de referencias no copian al objeto entero, solo copian la *referencia*, al hacer **objA = objB**, luego **objB** refiere al mismo objeto que **objA**, no se crea un objeto nuevo, sino que representan al mismo; en cambio para los tipos *primitivos* las variables sí representan a los valores que contienen, y al hacer asignaciones sí se producen copias nuevas, **a = b** copia el *contenido* de **b** en **a**, en el caso primitivo son dos variables distintas y se pueden modificar independientemente.
+Una diferencia con los tipos *primitivos* es que las asignaciones de referencias no copian al objeto entero, solo copian la *referencia*, al hacer **objA = objB**, luego **objB** refiere al mismo objeto que **objA**, no se crea un objeto nuevo, sino que representan al mismo; en cambio para los tipos *primitivos* las variables sí representan a los valores que contienen, y al hacer asignaciones se producen copias nuevas, **a = b** copia el *contenido* de **b** en **a**, son dos variables distintas y se pueden modificar independientemente.
+El acceso a los objetos (a sus métodos y atributos, etc..) se hace mediante referencias, al crear un objeto de una determinada clase, es decir, una instancia de la clase, obtendremos una *referencia* al objeto y la podemos asignar a una variable, que será de tipo referencia obviamente. 
+
 
 # Herencia, Interfaces
 
