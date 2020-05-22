@@ -42,8 +42,9 @@ Una interfaz permite definir qué métodos son necesarios sin especificar el con
 
 Ejemplo real de jerarquía de interfaces
 
-![http://docs.oracle.com/javase/tutorial/figures/collections/colls-coreInterfaces.gif](http://docs.oracle.com/javase/tutorial/figures/collections/colls-coreInterfaces.gif)  
-Imagen de http://docs.oracle.com
+<p align="center">
+        <img src="colls.gif">
+</p>
 
 
 
