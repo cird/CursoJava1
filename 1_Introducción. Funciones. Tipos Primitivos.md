@@ -8,7 +8,7 @@ Java es un lenguaje interpretado, esto quiere decir que se ejecuta a través de 
 <p align="center"> 
 <img src="http://docs.oracle.com/javase/tutorial/figures/getStarted/helloWorld.gif">
 </p>
-Imagen de http://docs.oracle.com
+Fuente https://docs.oracle.com/javase/tutorial/
 
 
 # Funciones - Operadores
