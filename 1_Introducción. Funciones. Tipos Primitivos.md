@@ -11,7 +11,6 @@ Java es un lenguaje interpretado, esto quiere decir que se ejecuta a través de 
 Imagen de http://docs.oracle.com
 
 
-
 # Funciones - Operadores
 
 ## Funciones
@@ -39,6 +38,7 @@ Una función puede ser un **productor** de datos, que devuelve resultados sin ar
 <p align="center"> 
 <img src="funciones.png">
 </p>
+
 ### Operadores
 
 Ciertas funciones básicas ya vienen incorporadas en el lenguaje como "operadores", que pueden ser unarios(una entrada), binarios (dos entradas), ternarios(tres entradas), la suma (**+**), la multiplicación (**\***), la división (**/**), el módulo o resto de la división(**%**), las comparaciones (**<**,**>**,**<=**,**>=**,**==**) son ejemplos de operadores binarios. El operador NOT, para negación lógica (**!**), o el operador NOT para inversión bit a bit (**~**) son ejemplos de operadores unarios. El operador (**?**) es un operador *ternario* para hacer asignaciones condicionales,  ejemplo ``` estado = (temperatura>30)?"caliente":"frío"; ```
