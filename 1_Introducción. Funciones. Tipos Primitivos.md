@@ -5,8 +5,11 @@
  
 Java es un lenguaje interpretado, esto quiere decir que se ejecuta a través de otro programa y no directamente en el sistema. En Java ese otro programa "intérprete" es la JVM (Máquina Virtual Java) y permite correr el mismo programa en diferentes arquitecturas, siempre y cuando el sistema tenga instalada la máquina virtual correspondiente. ¿Por qué se llama máquina virtual y no intérprete? Porque Java requiere que el programa sea compilado antes de ser ejecutable: a diferencia de otros lenguajes interpretados que sí corren tal como fueron escritos (ej. Python, Javascript), la máquina virtual no interpreta el código Java directamente, sino a través de bytecodes que son instrucciones para la JVM generadas por el compilador **javac** (java compiler).
 
-![http://docs.oracle.com/javase/tutorial/figures/getStarted/helloWorld.gif](http://docs.oracle.com/javase/tutorial/figures/getStarted/helloWorld.gif)  
+<p align="center"> 
+<img src="http://docs.oracle.com/javase/tutorial/figures/getStarted/helloWorld.gif">
+</p>
 Imagen de http://docs.oracle.com
+
 
 
 # Funciones - Operadores
@@ -33,8 +36,9 @@ En este caso se anidan los llamados a función, si reemplazamos cada vez al llam
 
 Una función puede ser un **productor** de datos, que devuelve resultados sin argumentos de entrada, por ejemplo una función que da la hora; ```obtenerHora()```, o un **consumidor**, que requiere argumentos de entrada pero *no* devuelve resultados, por ejemplo, una función que almacena datos en disco ```guardarDato(dato)``` o imprime en pantalla ```imprimir("hola")```. También hay funciones que no tienen ni entradas, ni salidas, y simplemente realizan una **acción** ejecutable, por ejemplo una subrutina para esperar un tiempo fijo ```esperarUnSegundo()```, su efecto es ocupar el procesador por un tiempo.
 
-![funciones.png](funciones.png)
-
+<p align="center"> 
+<img src="funciones.png">
+</p>
 ### Operadores
 
 Ciertas funciones básicas ya vienen incorporadas en el lenguaje como "operadores", que pueden ser unarios(una entrada), binarios (dos entradas), ternarios(tres entradas), la suma (**+**), la multiplicación (**\***), la división (**/**), el módulo o resto de la división(**%**), las comparaciones (**<**,**>**,**<=**,**>=**,**==**) son ejemplos de operadores binarios. El operador NOT, para negación lógica (**!**), o el operador NOT para inversión bit a bit (**~**) son ejemplos de operadores unarios. El operador (**?**) es un operador *ternario* para hacer asignaciones condicionales,  ejemplo ``` estado = (temperatura>30)?"caliente":"frío"; ```
