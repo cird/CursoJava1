@@ -20,10 +20,11 @@ int[] arreglo = new int[10];
 
 System.out.println(" Tamaño array : " + arreglo.length);
 ```
+<p align="center">
+    <img src="array.gif">
+</p>
 
-![https://docs.oracle.com/javase/tutorial/figures/java/objects-tenElementArray.gif](https://docs.oracle.com/javase/tutorial/figures/java/objects-tenElementArray.gif)
-
-fuente: https://docs.oracle.com
+fuente: https://docs.oracle.com/javase/tutorial/
 
 #### Set/Conjunto
 Set es un conjunto (desordenado) de objetos que no se repiten. Usualmente para manejar este tipo de objetos se tienen métodos/funciones que permiten saber si un objeto está o no en el Set.
