@@ -72,8 +72,9 @@ Agrupa 3 acciones
 *Condición*, determina cuando finaliza el bucle, evalúa la expresión *antes* de cada iteración, si el resultado es falso, finaliza.   
 *Incremento/decremento*, se ejecuta *después* de cada iteración para modificar la variable de control en cada iteración.  
 
-
-![https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/For-loop-diagram.png/220px-For-loop-diagram.png](https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/For-loop-diagram.png/220px-For-loop-diagram.png)
+<p align="center">
+        <img src="forLoopDiagram.png">
+</p>
 
 fuente: https://en.wikipedia.org/wiki/For_loop
 
