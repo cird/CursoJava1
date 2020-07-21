@@ -1,10 +1,14 @@
 
 # Decisiones y Repeticiones
 
-El lenguaje provee herramientas para alterar el orden secuencial de ejecución y para hacer repeticiones, mejor dicho iteraciones, porque nadie se baña dos veces en el mismo río. 
+El lenguaje da herramientas para cambiar el orden normal secuencial de ejecución y también para hacer repeticiones o mejor dicho iteraciones, porque aunque se repite el código pero las variables son distintas, nadie se baña dos veces en el mismo río. 
 
-## if - else
-Se utiliza para expresar condiciones, decisiones según alguna condición. La expresión dentro del if se evalúa, y define el camino a seguir, si el resultado es verdadero se ejecuta sentencia_1, si es falso se ejecuta sentencia_2. En ningún caso se ejecutan ambas.
+# Decisiones
+
+## if-else, switch-case
+
+### if - else
+Se utiliza para ejecutar código diferente según alguna condición. La expresión adentro del if se evalúa y define el camino a seguir, si el resultado es verdadero se ejecuta sentencia_1, si es falso se ejecuta la sentencia_2. En ningún caso se ejecutan ambas.
 
 ```Java
         if(expresión)  
@@ -13,9 +17,9 @@ Se utiliza para expresar condiciones, decisiones según alguna condición. La ex
           sentencia_2;  
 ```
 
-La cláusula **else** es opcional. sentencia_1 y sentencia_2 pueden ser una sentencia simples o bloques. 
+La cláusula **else** es opcional. La sentencia_1 y sentencia_2 pueden ser una sola sentencia o bloques. 
 
-Para el caso de bloques queda
+Si se usan bloques queda
 
 ```Java
         if(expresión) {  
@@ -25,11 +29,11 @@ Para el caso de bloques queda
         }  
 ```
         
-Se recomienda usar llaves siempre para evitar ambiguedades. Si bien se *pueden* "anidar" if's, es decir se pueden poner a la vez otros if-else dentro de alguno de los bloques if-else, no se aconsejan anidar demasiados if's, ya que hacen al código menos legible.
+Se recomienda usar llaves siempre para evitar ambiguedades. Si bien se *pueden* "anidar" if's, es decir se pueden poner otros if-else dentro de alguno de los bloques if-else, no se aconsejan anidar demasiados if's, ya que hacen al código menos legible.
 
-## switch
+### switch - case
 
-La sentencia **switch** compara una variable con una lista de constantes posibles. Cuando encuentra una coincidencia ejecuta el bloque de sentencias que siguen al **case** correspondiente, y si luego de evaluar todos los **case** no se encuentra ninguna coincidencia ejecuta el código bajo la sentencia **default**. Normalmente las constantes son numéricas, y a partir de Java 7, se pueden usar Strings.
+Con **switch** se compara una variable con una lista de constantes posibles. Cuando encuentra una coincidencia ejecuta el bloque que corresponde al **case**, y si luego de evaluar todos los **case** no se encuentra ninguna coincidencia, se ejecuta el código bajo la palabra **default**. Normalmente las constantes son numéricas,  a partir de Java 7, además se pueden usar Strings.
 
 ```Java
 switch (variable) {  
@@ -49,11 +53,11 @@ switch (variable) {
 }  
 ```
 
-Las sentencias se ejecutan hasta encontrar **break**; en ausencia de la sentencia **break** el programa sigue adelante hasta encontrar la llave de cierre del switch, si dentro de un **case** falta algún **break** se ejecutará también el **case** siguiente, esto puede ser intencional cuando queremos que dos constantes lleven a la misma acción, o por error (olvidarse de poner **break**). El bloque **switch** sólo chequea por igualdad, no evalua expresiones relacionales o lógicas, por lo que no puede haber dos case con constantes de igual valor.
+Las sentencias se ejecutan hasta encontrar **break**; si no hay **break** el programa sigue adelante hasta encontrar la llave de cierre del switch, si en un **case** falta algún **break** se ejecutará también el **case** siguiente, esto puede ser rara vez intencional si dos constantes tienen alguna acción en común, o por error común, olvidarse de poner **break**. El bloque **switch** sólo chequea por igualdad, no evalua expresiones lógicas ni relacionales, por lo que no puede haber dos case con constantes de mismo valor.
 
-## Bucles
+# Repeticiones
 
-### for, while, do-while, break, continue
+## for, while, do-while, break, continue
 
 ### for
 
@@ -101,7 +105,7 @@ do {
 } while (expresion);  
 ```
 
-# Recursividad 
-En un llamado recursivo una función se invoca a sí misma, permitiendo reutilizar partes de la función en algún proceso iterativo, se debe preveer alguna condición para que la función deje de llamarse a sí misma en algún momento del proceso para evitar un stackoverflow.
+## Recursividad 
+En un llamado recursivo una función se invoca a sí misma, permitiendo reutilizar partes de la función en algún proceso iterativo, se debe preveer alguna condición para que la función deje de llamarse a sí misma para evitar un stackoverflow.
 
 
