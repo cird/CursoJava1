@@ -3,7 +3,11 @@
 
 # Ecosistema del lenguaje
  
-Java es un lenguaje interpretado, esto quiere decir que se ejecuta a través de otro programa y no directamente en el sistema. En Java ese otro programa "intérprete" es la JVM (Máquina Virtual Java) y permite correr el mismo programa en diferentes arquitecturas, siempre y cuando el sistema tenga instalada la máquina virtual correspondiente. ¿Por qué se llama máquina virtual y no intérprete? Porque Java requiere que el programa sea compilado antes de ser ejecutable: a diferencia de otros lenguajes interpretados que sí corren tal como fueron escritos (ej. Python, Javascript), la máquina virtual no interpreta el código Java directamente, sino a través de bytecodes que son instrucciones para la JVM generadas por el compilador **javac** (java compiler).
+Java es lenguaje **interpretado**, se ejecuta *a través de otro programa* intérprete y no directamente en el sistema. En Java ese *otro programa* es la JVM (Máquina Virtual Java) que permite correr el mismo programa en diferentes arquitecturas, siempre que el sistema tenga instalada la JVM. ¿Por qué se llama máquina virtual y no intérprete? Porque Java requiere que el programa sea compilado antes de ser ejecutable: a diferencia de otros lenguajes interpretados que corren tal como fueron escritos (ej. Python, Javascript), la máquina virtual no interpreta el código de archivos .java directamente, sino el programa se compila en códigos llamados bytecodes que son las instrucciones de la JVM generadas por el compilador **javac** (java compiler) en archivos .class o .jar.
+
+<p align="center"> 
+.java => .jar => jvm => sistema
+</p>
 
 <p align="center"> 
 <img src="http://docs.oracle.com/javase/tutorial/figures/getStarted/helloWorld.gif">
@@ -15,25 +19,25 @@ Fuente https://docs.oracle.com/javase/tutorial/
 
 ## Funciones
 
-Las funciones describen procesos específicos, utilizan valores de entradas y luego de su ejecución dan como salida resultados (en general en relación con las entradas). Son unos de los bloques básicos para componer un programa. Se invocan simplemente mediante su nombre y entre paréntesis las entradas. Dentro del cuerpo de una función, donde se describe su comportamiento, se puede a su vez invocar a otras funciones, etc...
+Las funciones describen procesos específicos, utilizan valores de entradas y luego de su ejecución dan como salida resultados. Son unos de los bloques básicos para componer un programa. Se invocan simplemente mediante su nombre y entre paréntesis las entradas. Implementarla es escribir el cuerpo de la función, describir paso a paso su comportamiento, el cual puede a su vez necesitar invocar a otras funciones, etc...
 
-Por ejemplo al calcular una multiplicación a partir de la entrada de dos números.
+Por ejemplo calcular una multiplicación con la entrada de dos números.
 
 ```Java
 resultado = multiplicar (2,3);
 ```
 
-Las entradas entre paréntesis y separadas por comas (2,3); son procesadas por la función. Si no admite entradas los paréntesis se ponen vacíos (). Luego de procesar el cálculo obtendremos un resultado, en este caso = 6, valor que se asignará a la variable de la izquierda, es decir, una función después de procesada, es reemplazada por el resultado correspondiente durante el tiempo de ejecución (runtime).
+Las entradas entre paréntesis y separadas por comas (2,3) son procesadas por la función. Si no admite entradas los paréntesis van vacíos (). Luego de procesar el cálculo da un resultado, en este caso = 6, ese valor se asigna a la variable de la izquierda, una función cuando termina de ser procesada es reemplazada por el resultado correspondiente durante el tiempo de ejecución (runtime).
 
-Ejemplo ¿Qué valor se almacena en la variable resultado?
+Ejemplo ¿Qué valor se almacena en la variable **resultado**?
 
 ```Java
 resultado = multiplicar (multiplicar (2,5), multiplicar (3,5)) ;
 ```
 
-En este caso se anidan los llamados a función, si reemplazamos cada vez al llamado por su resultado, la función se invoca tres veces y el resultado final es 150. 
+En este caso se anidan los llamados a función, la función se invoca tres veces y el resultado final es 150.
 
-Una función puede ser un **productor** de datos, que devuelve resultados sin argumentos de entrada, por ejemplo una función que da la hora; ```obtenerHora()```, o un **consumidor**, que requiere argumentos de entrada pero *no* devuelve resultados, por ejemplo, una función que almacena datos en disco ```guardarDato(dato)``` o imprime en pantalla ```imprimir("hola")```. También hay funciones que no tienen ni entradas, ni salidas, y simplemente realizan una **acción** ejecutable, por ejemplo una subrutina para esperar un tiempo fijo ```esperarUnSegundo()```, su efecto es ocupar el procesador por un tiempo.
+Una función puede ser un **productor** de datos, devuelve resultados sin argumentos de entrada, ejemplo una función que da la hora; ```obtenerHora()```, puede ser un **consumidor**, que requiere entradas pero *no* devuelve resultados, ejemplo una función para imprimir en pantalla ```imprimir("hola")```, o pueden no tener ni entradas, ni salidas, solo realizan una **acción** ejecutable, ejemplo una subrutina para esperar un tiempo fijo ```esperarUnSegundo()```, su efecto es ocupar el procesador por un tiempo.
 
 <p align="center"> 
 <img src="funciones.png">
@@ -41,17 +45,18 @@ Una función puede ser un **productor** de datos, que devuelve resultados sin ar
 
 ### Operadores
 
-Ciertas funciones básicas ya vienen incorporadas en el lenguaje como "operadores", que pueden ser unarios(una entrada), binarios (dos entradas), ternarios(tres entradas), la suma (**+**), la multiplicación (**\***), la división (**/**), el módulo o resto de la división(**%**), las comparaciones (**<**,**>**,**<=**,**>=**,**==**) son ejemplos de operadores binarios. El operador NOT, para negación lógica (**!**), o el operador NOT para inversión bit a bit (**~**) son ejemplos de operadores unarios. El operador (**?**) es un operador *ternario* para hacer asignaciones condicionales,  ejemplo ``` estado = (temperatura>30)?"caliente":"frío"; ```
+Ciertas funciones básicas ya vienen incorporadas en el lenguaje como "operadores", que pueden tener una entrada (unarios), dos entradas (binarios), tres entradas (ternarios). Ejemplos de operadores unarios, el operador NOT, para negación lógica (**!**), o el operador NOT para inversión bit a bit (**~**). Ejemplos de operadores binarios: la suma (**+**), la multiplicación (**\***), la división (**/**), el módulo o resto de la división(**%**), las comparaciones (**<**,**>**,**<=**,**>=**,**==**). Finalmente el operador (**?**) es un ejemplo de operador *ternario* para hacer asignaciones condicionales como ``` estado = (temperatura>30)?"caliente":"frío"; ``` si la variable temperatura es mayor a 30, la variable estado se asigna "caliente", sino se le asigna "frio".
 
-## Efectos secundarios
+## Efectos secundarios!
 
-Si al ejecutar una función ocurren cambios por fuera de la relación entrada/salida se dice que tiene *efectos secundarios* o *colaterales* es decir que modifican el estado del sistema, pueden afectar variables internas, o dispositivos de salida. Por ejemplo la función ```imprimirEnPantalla("algo")``` producirá cambios en la pantalla.
+Si al ejecutar una función ocurren cambios por fuera de la relación entrada/salida se dice que tiene *efectos secundarios* o *colaterales* que modifican el estado del sistema y pueden afectar variables internas o dispositivos de salida. Ejemplo la función ```imprimirEnPantalla("algo")``` producirá como efectos secundarios los cambios en la pantalla.
 
-Una función que no produce efectos secundarios, y además es coherente, es decir, sólo produce resultados iguales para entradas iguales, se llama función *pura*, aunque en la práctica todas las funciones tienen "efectos secundarios" ya que todas consumen energía y tiempo para ejecutarse, lo cual produce cambios en el sistema y en el ambiente. El nombre "función pura" se usa en referencia al estado lógico del sistema. 
+Si una función no produce efectos secundarios y además es coherente es decir que sólo produce resultados iguales para entradas iguales, se llama función *pura*, aunque en la práctica todas las funciones tienen "efectos secundarios" ya que todas consumen energía y tiempo para ejecutarse, y estos son cambios en el sistema y en el ambiente, se usa el nombre "función pura" en referencia al estado lógico del sistema: valores en memoria y en disco. 
   
 ## Cómo escribir una función 
 
-Para definir una función en Java primero se declara el **tipo de dato del resultado**\*; luego el **nombre de la función**; y finalmente la **lista de parámetros de entrada**, cada entrada con su tipo correspondiente, todas entre paréntesis y separadas por coma.  (*si la función no devuelve resultado se declara como **void**)
+Para escribir una función en Java primero se declara el **tipo de dato del resultado**; luego el **nombre de la función**; y finalmente la lista de **parámetros de entrada**, cada entrada indicando el tipo de dato correspondiente, todas entre paréntesis y separadas por coma. (*si no devuelve resultado se declara como **void**)
+
 
 
 ```Java
@@ -75,9 +80,15 @@ int sumar( int a, int b){
 }
 ```
 
-El cuerpo de la función es la descripción del proceso que realiza y se escribe entre llaves **{ }** que sirven para demarcar bloques de código. En este caso como la función devuelve un valor necesita invocar la sentencia **return** que especifica cuál es el valor que la función va a devolver como resultado. 
+```Java
+void saludar() { 
+    System.out.println("Hola");
+}
+```
 
-Hay una función especial, cuyo nombre está reservado: la función **main**. A diferencia de las demás funciones que para invocarlas hay que poner el nombre y los argumentos en el programa, a la función **main** no hace falta llamarla, basta con que esté implementada y será llamada automáticamente por el sistema al arrancar el programa. Es la primera función que se ejecuta. Puede haber varias funciones main en un programa pero solo una se elegirá como punto de arranque, *entry point*. Dentro de la función main se pueden escribir otros llamados a funciones, sentencias y expresiones.
+El contenido, llamado cuerpo de la función va en un bloque de código entre llaves **{ }**, ahí se describe el proceso que realiza. Si la función devuelve un valor se necesita invocar la palabra clave **return** con la que se especifica el valor que devuelve como resultado. 
+
+Hay una función con nombre reservado para uso especial: la función **main**. A diferencia de las demás que para invocarlas hay que poner el nombre y argumentos en el programa, a la función **main** no hace falta llamarla, alcanza con que esté implementada y será llamada automáticamente por el sistema al arrancar el programa. Es la primera función que se ejecuta. Aunque hubiera varias funciones main en un programa solo una se elegirá como punto de arranque o *entry point*. Dentro de la función main se inicia el programa, se hacen llamados a otras funciones, sentencias y expresiones, etc.
 
 ```Java
 public static void main(String args[]){	
@@ -94,15 +105,16 @@ public class Test {
 ```
 
 # Expresiones, Sentencias y Bloques
-Las expresiones son combinaciones de operadores, llamados a función y/o asignaciones, y forman parte de las *sentencias* de un programa.
-Las sentencias son las "unidades" del programa. En Java terminan cada una en punto y coma ";" y están compuestas de una o más expresiones. Ejemplo:
+Las sentencias son las "unidades" del programa. En Java terminan cada una en punto y coma ";" y están compuestas de una o más expresiones. Podríamos decir es cada línea de código aunque algunas sentencias pueden ocupar más de una línea. Las expresiones son las combinaciones de asignaciones, llamados a función, operadores, que forman parte de las *sentencias* del programa.
+
+Ejemplo:
 
 ```Java
 log.info("un mensaje");
 
 ```
 
-Las sentencias se pueden agrupar en bloques que definen además un alcance para las variables. 
+Las sentencias se pueden agrupar en bloques que además definen el *alcance* para las variables.
 
 # Tipos de datos Primitivos:
 
@@ -125,12 +137,12 @@ Almacena un valor entero de 8-bit, desde -128 and a hasta 127 inclusive.
 ### char
 Permite almacenar un valor Unicode de 16-bit desde  '\u0000' (or 0) a '\uffff' 65535.
 
-Todos los tipos numéricos primitivos son con signo, lamentablemente en Java todos tienen signo, el formato es en complemento a dos (la representación binaria interna de los negativos es como la de un positivo pero invirtiendo todos los bits y sumando uno, esta representación facilita internamente algunas operaciones comunes). Desde Java 8 se proveen funciones para tratar int y long como si fueran sin signo.
+En Java todos los tipos numéricos primitivos son con signo, el formato es en complemento a dos (la representación binaria interna de los negativos es como la de un positivo pero invirtiendo todos los bits y sumando uno, esta representación facilita internamente algunas operaciones comunes). Desde Java 8 se proveen funciones para tratar **int** y **long** como si fueran sin signo, esto es trabajar con los bits raw (crudos) sin interpretar ningún bit como signo.
 
 
 # Tipo String
 
-Los Strings, o cadenas de caracteres, no son un tipo básico pero Java provee facilidades para crearlos como si lo fueran. Internamente una vez creada una variable String no puede modificarse, o mejor dicho, cuando se modifica un String internamente se crea otra variable nueva.
+Los Strings, o cadenas de caracteres, no son un tipo básico pero Java provee facilidades para crearlos como si lo fueran. Internamente una vez creada una variable String no puede modificarse, o mejor dicho, modificar un String internamente es crear otra variable nueva.
  
  ```Java
  String texto = "Esta es una variable que almacena texto";
